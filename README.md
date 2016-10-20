@@ -34,22 +34,21 @@ Once you've created the bundle file for server-side, you can create a middleware
 ```js
 const {bundleRenderer} = require('express-vue-builder');
 
-let middleware = bundleRenderer({
-  bundlePath: `./dist/server/bundle.js` // Vue application bundle for server-side
-}); // pass this to app.use() of your Express application
+let middleware = bundleRenderer(`./dist/server/bundle.js`); // pass this to app.use() of your Express application
 ```
 
 Check the included `./example` directory or run the `npm run example` command to start the sample application.
 
 ## API
 
-**bundleRenderer({bundlePath})**
+**bundleRenderer(bundlePath, options)**
 
 > Server-side rendering middleware for Vue.js application.
 
 | Option | Type | Required | Default | Description
 |--------|------|----------|---------|------------
 | bundlePath | String | Yes | - | Path to server-side application bundle.
+| options | Object | No | - | [Renderer options](https://www.npmjs.com/package/vue-server-renderer#renderer-options).
 
 ## License (MIT)
 
