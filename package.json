@@ -1,12 +1,76 @@
 {
   "name": "express-vue-builder",
-  "version": "0.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "1.0.0",
+  "description": "Vue.js server-side and client-side rendering middleware for Express.js.",
+  "main": "./src/index.js",
+  "ava": {
+    "files": [
+      "./tests/*.js"
+    ],
+    "concurrency": 1,
+    "failFast": true
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "scripts": {
+    "test": "ava",
+    "example:start": "node ./example/scripts/start.js",
+    "example:build": "node ./example/scripts/build-client.js; node ./example/scripts/build-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xpepermint/express-vue-builder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xpepermint/express-vue-builder/issues"
+  },
+  "homepage": "https://github.com/xpepermint/express-vue-builder#readme",
+  "keywords": [
+    "express",
+    "connect",
+    "vue",
+    "webpack",
+    "render",
+    "rendering",
+    "server",
+    "client",
+    "side",
+    "ssr",
+    "build",
+    "building",
+    "builder",
+    "compile",
+    "compiler",
+    "dev-server"
+  ],
+  "author": "Kristijan Sedlak (Xpepermint)",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "0.16.0",
+    "babel-core": "6.17.0",
+    "babel-loader": "6.2.5",
+    "babel-preset-es2015": "6.16.0",
+    "babel-preset-stage-2": "6.17.0",
+    "css-loader": "0.25.0",
+    "express": "4.14.x",
+    "extract-text-webpack-plugin": "2.0.0-beta.4",
+    "file-loader": "0.9.0",
+    "node-fetch": "1.6.3",
+    "postcss-cssnext": "2.8.0",
+    "vue": "2.0.3",
+    "vue-builder": "1.1.0",
+    "vue-loader": "9.7.0",
+    "vue-server-renderer": "2.0.3",
+    "vue-webpack": "1.3.5",
+    "vuex": "2.0.0",
+    "webpack": "2.1.0-beta.25",
+    "webpack-hot-middleware": "2.13.0",
+    "webpack-manifest-plugin": "1.1.0"
+  },
+  "pearDependencies": {
+    "vue-builder": "1.1.x",
+    "webpack": "2.1.0-beta.25"
+  },
+  "dependencies": {
+    "webpack-dev-middleware": "1.8.x",
+    "webpack-hot-middleware": "2.13.x"
+  }
 }
