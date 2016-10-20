@@ -1,6 +1,6 @@
 {
   "name": "express-vue-builder",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "description": "Vue.js server-side and client-side rendering middleware for Express.js.",
   "main": "./src/index.js",
   "ava": {
@@ -12,6 +12,7 @@
   },
   "scripts": {
     "test": "ava",
+    "example": "npm run example:build; npm run example:start",
     "example:start": "node ./example/scripts/start.js",
     "example:build": "node ./example/scripts/build-client.js; node ./example/scripts/build-server.js"
   },
@@ -50,27 +51,21 @@
     "babel-preset-es2015": "6.16.0",
     "babel-preset-stage-2": "6.17.0",
     "css-loader": "0.25.0",
-    "express": "4.14.x",
+    "express": "4.14.0",
     "extract-text-webpack-plugin": "2.0.0-beta.4",
     "file-loader": "0.9.0",
     "node-fetch": "1.6.3",
     "postcss-cssnext": "2.8.0",
     "vue": "2.0.3",
-    "vue-builder": "1.1.1",
+    "vue-builder": "1.1.3",
     "vue-loader": "9.7.0",
     "vue-server-renderer": "2.0.3",
-    "vue-webpack": "1.3.6",
-    "vuex": "2.0.0",
+    "vue-webpack": "1.3.10",
     "webpack": "2.1.0-beta.25",
     "webpack-hot-middleware": "2.13.0",
     "webpack-manifest-plugin": "1.1.0"
   },
   "peerDependencies": {
-    "vue-builder": "1.1.x",
-    "webpack": "2.1.0-beta.25"
-  },
-  "dependencies": {
-    "webpack-dev-middleware": "1.8.x",
-    "webpack-hot-middleware": "2.13.x"
+    "vue-builder": "1.1.x"
   }
 }

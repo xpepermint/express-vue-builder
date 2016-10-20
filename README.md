@@ -6,7 +6,7 @@
 
 <img src="logo.png" height="60" style="margin-bottom: 20px" />
 
-This package provides [Vue.js](http://vuejs.org) middlewares for [Express.js](http://expressjs.com). It includes a development server for client-side and server-side application rendering with support for hot module replacement and server-side application rendering utils for production.
+This package provides [Vue.js](http://vuejs.org) middlewares for [Express.js](http://expressjs.com). It provides server-side application rendering tools and is meant for use in production.
 
 This is an open source package for [Vue.js](http://vuejs.org/) and [Express.js](http://expressjs.com). The source code is available on [GitHub](https://github.com/xpepermint/express-vue-builder) where you can also find our [issue tracker](https://github.com/xpepermint/express-vue-builder/issues).
 
@@ -14,46 +14,21 @@ This is an open source package for [Vue.js](http://vuejs.org/) and [Express.js](
 
 * [vue-webpack](https://github.com/xpepermint/vue-webpack): Webpack configuration object generator for Vue.js.
 * [vue-builder](https://github.com/xpepermint/vue-builder): Server-side and client-side rendering for Vue.js.
+* [express-vue-dev](https://github.com/xpepermint/express-vue-dev): Vue.js development server middleware for Express.js.
 
 ## Install
 
 Run the command below to install the package.
 
 ```
-$ npm install --save-dev express-vue-builder vue-builder webpack@2.1.0-beta.25
+$ npm install --save-dev express-vue-builder vue-builder
 ```
 
 ## Usage
 
-Check the included `./example` directory or run the `npm run example:start` command to start the sample application.
-
-### Development Server Middleware
-
-The `devServer` is a fully featured development server middleware built on top of [Webpack](http://webpack.github.io) which renders the [Vue.js](http://vuejs.org) application for client-side and server-side. The middleware is configurable and supports hot module replacement out of the box. It should be used in **development only**.
-
-To create a middleware, create a Webpack configuration objects for client-side and server-side then pass it the the `devServer` method. Use the [vue-webpack](https://github.com/xpepermint/vue-webpack) package to simplify the setup.
-
-```js
-const {build} = require('vue-webpack');
-const {devServer} = require('express-vue-builder');
-
-let middleware = devServer({
-  server: build({
-    mode: 'server',
-    inputFilePath: `./app/server-entry.js` // Vue application entry file for server-side
-  }),
-  client: build({
-    mode: 'client',
-    inputFilePath: `./app/client-entry.js` // Vue application entry file for client-side
-  })
-}); // pass this to app.use() of your Express application
-```
-
-### Bundle Renderer Middleware
-
 The `bundleRenderer` middleware provides server-side rendering for Vue.js applications in **production**. It creates a new instance of [VueRender](https://github.com/xpepermint/vue-builder#api) class (provided by the [vue-builder](https://github.com/xpepermint/express-vue-builder) dependency) and installs it to the request object as `req.vue` variable.
 
-Before we deploy application in production, we need to compile our Vue.js application into a bundle. A bundle is simply a file holding application's source code. Because we would like to render application in browsers as well as on the server, we need build two bundle files - one targeting browsers, the other targeting the server. Check the attached example on how to build a bundle or check the documentation of the [vue-builder](https://github.com/xpepermint/express-vue-builder) package.
+Before we deploy application in production, we need to compile our Vue.js application into a bundle. A bundle is simply a file holding application's source code. Because we would like to render application in browsers as well as on the server, we need to build two bundle files - one targeting browsers, the other targeting the server. Check the attached example on how to build a bundle. Check the documentation of the [vue-builder](https://github.com/xpepermint/express-vue-builder) package for details.
 
 Once you've created the bundle file for server-side, you can create a middleware.
 
@@ -65,17 +40,9 @@ let middleware = bundleRenderer({
 }); // pass this to app.use() of your Express application
 ```
 
+Check the included `./example` directory or run the `npm run example` command to start the sample application.
+
 ## API
-
-**devServer({server, client, verbose})**
-
-> Development server middleware for serving Vue.js application.
-
-| Option | Type | Required | Default | Description
-|--------|------|----------|---------|------------
-| server | Object | Yes | - | Webpack configuration object for server-side rendering.
-| client | Object | Yes | - | Webpack configuration object for client-side rendering.
-| verbose | Boolean | No | false | When `true` detailed logging is enabled.
 
 **bundleRenderer({bundlePath})**
 
