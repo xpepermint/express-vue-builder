@@ -2,11 +2,11 @@
 
 # [express](http://expressjs.com)-[vue-builder](https://github.com/xpepermint/vue-builder)
 
-> Vue.js server-side and client-side rendering middleware for Express.js.
+> Vue.js server-side rendering middleware for Express.js.
 
 <img src="logo.png" height="60" style="margin-bottom: 20px" />
 
-This package provides [Vue.js](http://vuejs.org) middlewares for [Express.js](http://expressjs.com). It provides server-side application rendering tools and is meant for use in production.
+This package provides production-ready server-side [Vue.js](http://vuejs.org) application rendering middleware for [Express.js](http://expressjs.com). It creates a new instance of [VueRender](https://github.com/xpepermint/vue-builder#api) class (provided by the [vue-builder](https://github.com/xpepermint/express-vue-builder) dependency) and installs it to the request object as `req.vue` variable.
 
 This is an open source package for [Vue.js](http://vuejs.org/) and [Express.js](http://expressjs.com). The source code is available on [GitHub](https://github.com/xpepermint/express-vue-builder) where you can also find our [issue tracker](https://github.com/xpepermint/express-vue-builder/issues).
 
@@ -26,8 +26,6 @@ $ npm install --save-dev express-vue-builder vue-builder
 
 ## Usage
 
-The `bundleRenderer` middleware provides server-side rendering for Vue.js applications in **production**. It creates a new instance of [VueRender](https://github.com/xpepermint/vue-builder#api) class (provided by the [vue-builder](https://github.com/xpepermint/express-vue-builder) dependency) and installs it to the request object as `req.vue` variable.
-
 Before we deploy application in production, we need to compile our Vue.js application into a bundle. A bundle is simply a file holding application's source code. Because we would like to render application in browsers as well as on the server, we need to build two bundle files - one targeting browsers, the other targeting the server. Check the attached example on how to build a bundle. Check the documentation of the [vue-builder](https://github.com/xpepermint/express-vue-builder) package for details.
 
 Once you've created the bundle file for server-side, you can create a middleware.
@@ -46,7 +44,7 @@ Check the included `./example` directory or run the `npm run example` command to
 
 **bundleRenderer({bundlePath})**
 
-> Server-side rendering utils for Vue.js application in production.
+> Server-side rendering middleware for Vue.js application.
 
 | Option | Type | Required | Default | Description
 |--------|------|----------|---------|------------
