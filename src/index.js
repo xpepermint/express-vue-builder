@@ -22,7 +22,7 @@ function combine(mids) {
 }
 
 /*
-* Vue.js development server middleware.
+* Development server middleware for serving Vue.js application.
 */
 
 exports.devServer = function ({server, client, verbose=false}={}) {

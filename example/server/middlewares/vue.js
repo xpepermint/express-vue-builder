@@ -4,17 +4,12 @@ const {devServer, bundleRenderer} = require('../../../src');
 exports.vueDevServer = function(ctx) {
   return devServer({
     server: build({
-      env: 'development',
       mode: 'server',
-      inputFilePath: `${__dirname}/../../app/server-entry.js`,
-      outputPath: `${__dirname}/../../../dist/server`
+      inputFilePath: `${__dirname}/../../app/server-entry.js`
     }),
     client: build({
-      env: 'development',
       mode: 'client',
-      inputFilePath: `${__dirname}/../../app/client-entry.js`,
-      outputPath: `${__dirname}/../../../dist/client`,
-      publicPath: '/'
+      inputFilePath: `${__dirname}/../../app/client-entry.js`
     })
   })
 };
