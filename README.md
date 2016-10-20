@@ -6,14 +6,14 @@
 
 <img src="logo.png" height="60" style="margin-bottom: 20px" />
 
-This package provides [Vue.js](http://vuejs.org) middlewares for [express.js](http://expressjs.com). It includes a development server for client-side application rendering with support for hot module replacement and server-side application rendering utils.
+This package provides [Vue.js](http://vuejs.org) middlewares for [Express.js](http://expressjs.com). It includes a development server for client-side and server-side application rendering with support for hot module replacement and server-side application rendering utils for production.
 
-This is an open source package for [Vue.js](http://vuejs.org/). The source code is available on [GitHub](https://github.com/xpepermint/express-vue-builder) where you can also find our [issue tracker](https://github.com/xpepermint/express-vue-builder/issues).
+This is an open source package for [Vue.js](http://vuejs.org/) and [Express.js](http://expressjs.com). The source code is available on [GitHub](https://github.com/xpepermint/express-vue-builder) where you can also find our [issue tracker](https://github.com/xpepermint/express-vue-builder/issues).
 
 ## Related Projects
 
 * [vue-webpack](https://github.com/xpepermint/vue-webpack): Webpack configuration object generator for Vue.js.
-* [vue-builder](https://github.com/xpepermint/express-vue-builder): Server-side and client-side rendering for Vue.js.
+* [vue-builder](https://github.com/xpepermint/vue-builder): Server-side and client-side rendering for Vue.js.
 
 ## Install
 

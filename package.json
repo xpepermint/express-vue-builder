@@ -1,6 +1,6 @@
 {
   "name": "express-vue-builder",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Vue.js server-side and client-side rendering middleware for Express.js.",
   "main": "./src/index.js",
   "ava": {
