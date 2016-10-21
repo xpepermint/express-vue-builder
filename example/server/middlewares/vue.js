@@ -1,4 +1,3 @@
-const {build} = require('vue-webpack');
 const {bundleRenderer} = require('../../../src');
 
 exports.vueBundleRenderer = function () {
