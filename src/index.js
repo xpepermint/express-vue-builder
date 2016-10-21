@@ -1,3 +1,4 @@
+const path = require('path');
 const fs = require('fs');
 const {VueRender} = require('vue-builder');
 
@@ -6,7 +7,7 @@ const {VueRender} = require('vue-builder');
 */
 
 exports.bundleRenderer = function (bundlePath, options={}) {
-  let source = fs.readFileSync(bundlePath, 'utf8');
+  let source = fs.readFileSync(path.resolve(bundlePath), 'utf8');
   let render = new VueRender(source, options);
 
   return (req, res, next) => {
