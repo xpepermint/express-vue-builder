@@ -1,6 +1,6 @@
 {
   "name": "express-vue-builder",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "Vue.js server-side rendering middleware for Express.js.",
   "main": "./src/index.js",
   "ava": {
@@ -55,6 +55,7 @@
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "2.0.0-beta.4",
     "file-loader": "^0.9.0",
+    "inline-environment-variables-webpack-plugin": "1.1.x",
     "node-fetch": "^1.6.3",
     "postcss-cssnext": "^2.8.0",
     "vue": "^2.0.3",
