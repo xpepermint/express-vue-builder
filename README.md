@@ -24,7 +24,7 @@ This is an open source package for [Vue.js](http://vuejs.org/) and [Express.js](
 Run the command below to install the package.
 
 ```
-$ npm install --save-dev express-vue-builder vue-builder
+$ npm install --save express-vue-builder vue-builder
 ```
 
 ## Usage
