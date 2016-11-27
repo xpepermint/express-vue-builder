@@ -43,13 +43,8 @@ module.exports = ({mode}) => ({
       'process.env.NODE_ENV': JSON.stringify('production'),
       'process.env.VUE_ENV': JSON.stringify(mode)
     }),
-    new webpack.optimize.DedupePlugin(),
     new ExtractTextPlugin(`bundle.css?[hash]`),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {warnings: false}
-    }),
-    new webpack.LoaderOptionsPlugin({
-      minimize: true
-    })
+    new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}}),
+    new webpack.LoaderOptionsPlugin({minimize: true})
   ]
 });
