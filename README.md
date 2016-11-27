@@ -10,14 +10,19 @@ This package provides production-ready server-side [Vue.js](http://vuejs.org) ap
 
 This is an open source package for [Vue.js](http://vuejs.org/) and [Express.js](http://expressjs.com). The source code is available on [GitHub](https://github.com/xpepermint/express-vue-builder) where you can also find our [issue tracker](https://github.com/xpepermint/express-vue-builder/issues).
 
-## Related Projects
+## Related
 
-* [vue-webpack](https://github.com/xpepermint/vue-webpack): Webpack configuration object generator for Vue.js.
+### Packages
+
 * [vue-builder](https://github.com/xpepermint/vue-builder): Server-side and client-side rendering for Vue.js.
 * [express-vue-dev](https://github.com/xpepermint/express-vue-dev): Vue.js development server middleware for Express.js.
 * [koa-vue-builder](https://github.com/kristianmandrup/koa-vue-builder): Vue.js server-side rendering middleware for Koa.js.
 * [koa-vue-dev](https://github.com/kristianmandrup/koa-vue-dev): Vue.js development server middleware for Koa.js.
 * [vue-cli-template](https://github.com/xpepermint/vue-cli-template): A simple server-side rendering CLI template for Vue.js.
+
+### Examples
+
+* [vue-example](https://github.com/xpepermint/vue-example): Vue.js example application
 
 ## Install
 
