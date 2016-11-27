@@ -1,4 +1,5 @@
 const {createServer} = require('../server');
+const {httpHost, httpPort} = require('../config/settings');
 
-createServer('127.0.0.1', 3000);
-console.log(`Listening on 127.0.0.1:3000`);
+createServer(httpHost, httpPort);
+console.log(`Listening on ${httpHost}:${httpPort}`);
