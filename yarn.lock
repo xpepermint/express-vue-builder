@@ -1061,6 +1061,10 @@ buffer-shims@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/buffer-shims/-/buffer-shims-1.0.0.tgz#9978ce317388c649ad8793028c3477ef044a8b51"
 
+buffer-to-arraybuffer@0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/buffer-to-arraybuffer/-/buffer-to-arraybuffer-0.0.4.tgz#f3e5e3f6f2632c71e7cdebe76ed1718fad421d4c"
+
 buffer-xor@^1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/buffer-xor/-/buffer-xor-1.0.3.tgz#26e61ed1422fb70dd42e6e36729ed51d855fe8d9"
@@ -2793,10 +2797,12 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
-node-fetch@^1.6.3:
-  version "1.6.3"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.6.3.tgz#dc234edd6489982d58e8f0db4f695029abcd8c04"
+node-fetch@^2.0.0-alpha.1:
+  version "2.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.0.0-alpha.1.tgz#28499a933f19adcf3ecf8b9fa39a6c79202d1072"
   dependencies:
+    babel-runtime "^6.11.6"
+    buffer-to-arraybuffer "0.0.4"
     encoding "^0.1.11"
     is-stream "^1.0.1"
 
